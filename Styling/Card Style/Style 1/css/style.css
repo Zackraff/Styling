@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #000000f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* card */
+.card {
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    background-color: #000;
+    position: relative;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.card h2 {
+    color: #ff4a4a;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 140%;
+    background-image: linear-gradient(180deg, #ff1b1b, #ff8585);
+    animation: rotate 3s linear infinite;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    background-color: #02001c;
+    border-radius: inherit;
+}
+
+@keyframes rotate {
+    100% {
+        rotate: 360deg;
+    }
+}
+
+/* card */
+
+/* Footer */
+footer {
+    display: flex;
+    text-align: center;
+    color: rgba(255,255,255,0.3);
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 1.2rem 7%;   
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.credit a {
+    color: white;
+    font-size: 15px;
+}
+
+.social a {
+    color: white;
+    margin: 1rem;
+}
+
+footer .credit a:hover,
+footer .social a:hover {
+    color: rgba(255,255,255,0.3);
+}
+
+footer .social {
+    letter-spacing: 20px;
+}
